@@ -1,0 +1,62 @@
+<head>
+  <title>template</template></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=11">
+  <meta name="renderer" content="webkit">
+  <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+
+</head>
+<body>
+<!-- 文本 -->
+<span id="app">message:{{ msg }}</span>
+<!-- 一次性 -->
+<span v-once>这个将不会改变: {{ msg }}</span>
+
+<!-- 输出真正的HTML -->
+<!-- <p>Using mustaches: {{ rawHtml }}</p> -->
+<p>Using v-html directive: <span v-html="rawHtml"></span></p>
+
+<div v-bind:id="dynamicId"></div>
+
+<button v-bind:disabled='isButtonDisabled'>button</button>
+
+<p v-if="seen"></p>
+<a v-bind:href="url"></a>
+<!-- 简写 -->
+<a :href="url"></a>
+
+<a v-on:click="doSomething"></a>
+<!-- 简写 -->
+<a @click="doSomething"></a>
+
+<div id="example">
+  <p>Original message: "{{ message }}"</p>
+  <p>Computed reversed message: "{{ reversedMessage }}"</p>
+  <p>Original message: "{{ newReverSend }}"</p>
+</div>
+
+<div id="demo">
+  <p>{{ fullName }}</p>
+  <input type="text" v-model="firstName">
+</div>
+
+
+<div id="watch-example">
+  <p>
+    Ask a yes/no question:
+    <input v-model="question">
+  </p>
+  <p>{{ answer }}</p>
+</div>
+</body>
+<!-- 开发-->
+<!-- <script src="https://vuejs.org/js/vue.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+<!-- 生成环境 -->
+<!-- <script src="https://vuejs.org/js/vue.min.js"></script> -->
+<!-- 生产环境版本，优化了尺寸和速度 -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript" src="./assets/js/template.js"></script>
+
+</html>
